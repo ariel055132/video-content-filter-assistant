@@ -271,6 +271,12 @@ Not yet bundled as a single automated application:
 
 These components can be integrated later without changing the core report contract.
 
+## Inspiration
+
+This project was inspired by Bilibili creator LunaticMosfet's video [*【旧世代电台】新年的内容消费行动建议*](https://www.bilibili.com/video/BV1AAZyBGEtP/). It prompted the central question behind this repository: before committing time to a piece of content, can we first decide whether it deserves our attention?
+
+This repository is an independent implementation of that idea, extending it into a repeatable AI-assisted workflow for collecting evidence, reconstructing arguments, evaluating quality, and deciding how deeply to engage with a video.
+
 ## Philosophy
 
 > Video content should pass through a filtering workflow before it enters personal attention.
