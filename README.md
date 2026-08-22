@@ -157,6 +157,12 @@ python3 -m unittest discover -s tests -v
 
 The project currently uses only the Python standard library for indexing and tests.
 
+### 5. Follow up and publish
+
+After a video or podcast report is delivered, create a one-time reminder for 30 minutes later. The reminder asks the user to write a short personal summary containing the most important idea, their own judgment, and one next action. This keeps the assistant's filtering result separate from the user's learning and reflection.
+
+Completed reports remain under `summaries/`. On this workstation, the GitHub publishing clone is `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`. Rebuild `INDEX.md`, run both validation commands, review the Git diff, and only then commit and push the project and reports. If the publishing clone contains unrelated or unmerged changes, stop instead of overwriting them.
+
 ## How to implement the assistant
 
 The assistant can be implemented in Codex or another tool-capable AI agent. The important part is not a specific model or SDK; it is enforcing a reliable workflow and a persistent output contract.
@@ -189,7 +195,10 @@ For each queue item, the assistant should:
 10. Assign both scores and one allowed recommendation.
 11. Create exactly one `summaries/YYYY-MM-DD-video-ID-short-title.md` report for each successfully analyzed video.
 12. Update the queue to `completed`, or to `needs-input` when essential evidence is unavailable.
-13. Rebuild the index, run validation, and clean up temporary media one file at a time.
+13. Rebuild the index and run validation.
+14. Create a one-time reminder for 30 minutes later, asking the user to write their own summary, judgment, and one next action.
+15. Sync the validated project and `summaries/` to the configured GitHub publishing clone, review the diff, then commit and push when the clone is clean.
+16. Clean up temporary media one file at a time.
 
 ### Output contract
 

@@ -1,0 +1,342 @@
+Project: Video Content Filter Assistant
+
+Purpose
+This project is a lightweight AI-assisted workflow for filtering videos before watching them.
+The goal is not to let AI replace learning, but to let AI act as the first attention gate:
+
+- Decide whether a video is worth watching.
+- Identify whether summary alone is enough.
+- Suggest whether to skip, skim, jump to key sections, watch fully, or study deeply.
+- Reduce low-value content consumption and protect attention.
+
+
+Core Principle
+Video content should enter a filtering workflow before it enters personal attention.
+
+The assistant should help classify each video into one of five actions:
+
+1. Skip
+2. Read AI summary only
+3. Watch selected sections
+4. Watch the full video
+5. Deeply study and take notes
+
+
+Minimum Viable Workflow
+1. Inspect the video page and collect authoritative metadata: title, creator, length, publish date, description, chapters, and source URL.
+2. Look for a transcript in this order:
+   - Creator-provided captions or transcript
+   - Platform-generated captions
+   - A reliable public transcript that clearly corresponds to the same video
+3. If no usable transcript exists, obtain the audio-only stream rather than the full video whenever possible, save it to a temporary location, and transcribe it locally with MacWhisper. Use an already-downloaded model and do not save the transcription to MacWhisper history unless requested.
+4. Check that the transcript covers the full runtime. Correct only obvious recognition errors involving names, titles, technical terms, and homophones; do not silently invent missing content.
+5. Analyze the transcript with the filtering prompt.
+6. Verify important factual or scientific claims against primary or authoritative sources when the user requests analysis, when the claims are consequential, or when confidence is low. Clearly distinguish the creator's claims, verified facts, and the assistant's inference.
+7. Let AI produce:
+   - One-sentence summary
+   - Core points
+   - Usefulness assessment
+   - Suitable audience
+   - Risk flags
+   - Viewing recommendation
+   - Recommendation level from 1 to 10
+   - Content quality score out of 25
+8. Save each completed summary and analysis as a Markdown file under `summaries/`, using `YYYY-MM-DD-video-ID-short-title.md` when a stable video ID is available.
+9. Read only the AI output first.
+10. Decide whether to watch the original video.
+11. If the video is watched, write one personal sentence afterward.
+12. After delivering a video or podcast report, create a one-time reminder for 30 minutes later when reminder tooling is available. The reminder should ask the user to write their own summary, judgment, and one next action.
+13. Keep every completed report under `summaries/`. On this workstation, publish the validated project and reports through `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`, after reviewing the Git diff and only when that clone is clean.
+14. After the result has been delivered and no further transcript work is pending, delete each downloaded temporary audio/video file and temporary API/config file by its exact path. Never use recursive or bulk deletion. Report what was removed.
+
+
+Summary File Invariant
+The output unit is one source video, not one request, playlist, channel, or batch.
+
+- Every successfully analyzed video MUST have exactly one standalone Markdown summary under `summaries/`.
+- This rule still applies when the user supplies a playlist, channel, collection, or multiple URLs: N analyzed videos require N individual Markdown summary files.
+- Never combine the full summaries of multiple videos into a single Markdown file as the primary deliverable.
+- A playlist-level index, ranking, or overview Markdown may be created as an additional file, but it must link to the individual video summaries and must never replace them.
+- Name each individual file `YYYY-MM-DD-video-ID-short-title.md` when a stable video ID is available.
+- Before reporting completion, verify that the number of individual summary files created equals the number of videos successfully analyzed and that every index entry points to its corresponding standalone file.
+
+
+Markdown 輸出要求
+當使用者提供影片網址、本機影片、字幕或逐字稿並要求分析時，必須實際建立 Markdown 檔案，不可只在對話中顯示分析結果。
+
+- 預設輸出目錄為 `summaries/`；若使用者指定其他路徑或檔名，則依使用者指定。
+- 完成後必須提供可點擊的檔案連結。
+- 每支影片的 Markdown 報告必須包含：
+  1. 影片基本資訊
+  2. 內容摘要
+  3. 主要觀點與重點
+  4. 適合哪些觀眾
+  5. 推薦程度（1～10 分）
+  6. 推薦或不推薦的理由
+  7. 值得觀看的段落與時間點；若無可靠時間碼，改列值得觀看的主題段落
+  8. 資訊可信度、分析依據與可能限制
+- 推薦程度（1～10 分）是面向使用者的直觀觀看推薦分數，必須與既有的內容品質總分（25 分制）同時保留；兩者用途不同，不得互相取代。
+- 可接受的來源包括本機影片檔、字幕／逐字稿，以及 YouTube、Bilibili 等影片網址。
+- 若網站限制存取或無法取得完整內容，必須清楚說明限制，並請使用者補充影片、字幕或逐字稿；不得只根據標題或不完整資料假裝完成完整分析。
+- 除非使用者另有要求，檔名使用 `YYYY-MM-DD-video-ID-short-title.md`。
+
+可直接使用的任務指令：
+
+請分析這支影片：
+<影片網址、影片檔案路徑，或字幕檔路徑>
+
+請把分析結果寫入：
+summaries/<影片名稱>.md
+
+內容必須包含：
+1. 影片基本資訊
+2. 內容摘要
+3. 主要觀點與重點
+4. 適合哪些觀眾
+5. 推薦程度（1～10 分）
+6. 推薦或不推薦的理由
+7. 值得觀看的段落與時間點
+8. 資訊可信度與可能的限制
+
+請實際建立 Markdown 檔，不要只在對話中顯示內容。完成後提供檔案連結。
+
+
+Input Fields
+For each video, collect the following when available:
+
+- Title
+- URL
+- Channel or creator
+- Source, such as YouTube subscription, Bilibili, newsletter, friend recommendation, RSS
+- Topic tags, such as AI, product, writing, investing, games, life, research
+- Video length
+- Publish date
+- Transcript
+- Existing timestamps or chapters
+
+
+Main Filtering Prompt
+Use the following prompt for each video transcript:
+
+---
+
+You are my video content filtering assistant.
+
+My goal is not to fully learn from this video yet. My goal is to decide whether it is worth spending my attention on.
+
+Before writing the answer, follow this execution procedure:
+
+1. Establish the source record.
+   - Confirm the exact title, creator, URL, duration, publish date, description, and chapters when available.
+   - Prefer information from the original platform page.
+
+2. Obtain the most reliable transcript available.
+   - Prefer creator captions, then platform captions, then a clearly matching public transcript.
+   - If none exists and local transcription is authorized, download audio only rather than the full video whenever possible and transcribe it with MacWhisper using an already-downloaded model.
+   - Confirm that the transcript spans the complete video. Correct only obvious speech-recognition mistakes; retain uncertainty where wording cannot be recovered reliably.
+
+3. Reconstruct the argument before judging it.
+   - Identify the central thesis, supporting claims, examples, source references, conclusion, and proposed actions.
+   - Separate what the creator explicitly says from implications inferred by the assistant.
+   - Do not base the summary only on the title, description, comments, or a partial transcript.
+
+4. Evaluate the content critically.
+   - Identify assumptions, causal leaps, survivorship bias, selection bias, missing counterexamples, limitations, and where anecdotes are treated as general evidence.
+   - Distinguish advice that is useful as a heuristic from claims presented as universal or scientifically established.
+   - For consequential, scientific, medical, financial, legal, or doubtful claims, verify against primary research or authoritative sources and cite them near the relevant analysis.
+
+5. Write a self-contained result.
+   - Lead with the real thesis, then summarize the argument, evaluate its strengths and weaknesses, and end with a practical interpretation.
+   - Label uncertainty and transcription limitations explicitly.
+   - Do not reproduce or provide the complete transcript unless the user specifically requests it and doing so is permitted.
+
+6. Save the result.
+   - Save the complete summary and analysis as a standalone Markdown file under the project's `summaries/` directory: one source video must correspond to one Markdown file.
+   - For a playlist or batch, create one standalone Markdown file per video. A separate playlist index is optional and cannot replace the individual files.
+   - Use the filename pattern `YYYY-MM-DD-video-ID-short-title.md` when the source has a stable video ID.
+   - Include source metadata, the one-sentence summary, core argument, critical analysis, suitable audience, recommendation level from 1 to 10, recommendation reasons, recommended sections or timestamps, practical interpretation, confidence and limitations, reference links, and media-cleanup status.
+   - Do not store downloaded media or a complete copyrighted transcript in the summaries directory.
+
+7. Clean up temporary media.
+   - Once the analysis is delivered and no follow-up transcript work remains, delete every temporary audio/video, API response, and download configuration file individually by exact path.
+   - Never use recursive deletion, directory deletion, globs, or bulk-delete commands.
+   - Tell the user whether temporary media was downloaded and whether it was removed.
+
+Please analyze the transcript and produce the following:
+
+1. One-Sentence Summary
+Explain what this video is really about in one sentence.
+
+2. Core Points
+Summarize the main points in no more than 5 bullet points.
+
+3. Usefulness Assessment
+Judge whether this video contains:
+- New information
+- Actionable advice
+- First-hand sources
+- Unique creator experience
+- Important arguments
+- Mostly emotional discussion, casual talk, or repackaged common sense
+
+4. Content Type
+Classify the video mainly as one or more of:
+- Knowledge-based
+- Opinion-based
+- Experience sharing
+- Emotional companionship
+- Visual or demonstration-based
+- Entertainment
+
+5. Suitable Audience
+Explain who is most likely to benefit from the video and who can safely skip it.
+
+6. Risk Flags
+Point out whether the video has any of the following problems:
+- Clickbait
+- Too repetitive
+- Weak sourcing
+- Reasoning jumps too quickly
+- Emotion-driven claims
+- Common sense overpackaged as insight
+- Requires visuals to understand its real value
+
+7. Viewing Recommendation
+Choose exactly one:
+- Skip
+- Read AI summary only
+- Watch selected sections
+- Watch full video
+- Deeply study
+
+8. Recommendation Level
+Give a viewing recommendation score from 1 to 10 and briefly explain why. This measures whether the user should spend attention on the original video; it does not replace the separate 25-point content quality score.
+
+9. Recommended Sections
+If the recommendation is "Watch selected sections", list the most valuable sections, topics, or timestamps.
+If timestamps are unavailable, list topic-based sections.
+
+10. Content Quality Score
+Rate each item from 1 to 5:
+- Relevance
+- Information density
+- Originality
+- Source quality
+- Action value
+
+Give a total score out of 25 and explain the reason briefly.
+
+Transcript:
+
+---
+
+
+Personal Preference Add-On
+Add this section before the transcript when personalized filtering is needed:
+
+---
+
+My content preferences:
+- I care about AI, product thinking, writing, creation, investing, systems, and practical personal improvement.
+- These topics are preferences, not an exclusive whitelist. When I submit content from another topic, treat that submission as evidence of current interest. Do not lower the relevance score or recommend skipping solely because the topic is absent from this list.
+- I prefer content with concrete methods, first-hand sources, useful examples, and clear reasoning.
+- I want to avoid emotional commentary, hype chasing, generic opinions, repetitive news reactions, and common sense packaged as insight.
+- If the video only repeats common online takes, recommend skipping it.
+- If the video has primary sources, concrete cases, operational methods, or unique creator experience, increase its score.
+
+---
+
+
+Scoring Rules
+Use the total score to decide the default action:
+
+- 0-10: Skip
+- 11-15: Read AI summary only
+- 16-20: Watch selected sections
+- 21-23: Watch full video
+- 24-25: Deeply study
+
+Human judgment can override the score.
+If the AI gives a high score but the summary does not trigger curiosity or practical value, skipping is acceptable.
+
+
+After-Watching Note
+For every video that is actually watched, write one personal sentence:
+
+My one sentence:
+The truly useful thing from this video is __________.
+Because of this, I will __________.
+
+
+Suggested Tracking Table
+Use a table in Notion, Obsidian, Google Sheets, Apple Notes, or a local CSV with these columns:
+
+- Title
+- URL
+- Creator
+- Source
+- Topic
+- AI one-sentence summary
+- AI recommendation
+- Total score
+- Recommended sections
+- My decision
+- My one sentence
+- Status
+
+Suggested status values:
+
+- Inbox
+- AI filtered
+- Skipped
+- Summary saved
+- To watch selected sections
+- To watch full video
+- Deep study
+- Done
+
+
+Future Automation Ideas
+After manually testing this workflow on 20-30 videos, this project can be expanded into an automated system:
+
+1. Collect videos from YouTube Watch Later, subscriptions, RSS, newsletters, or manually pasted URLs.
+2. Fetch metadata and transcript.
+3. Send transcript to an AI model.
+4. Store output in a local markdown file, CSV, Notion database, Google Sheet, or Obsidian vault.
+5. Generate a daily or weekly digest of only the videos worth attention.
+6. Track which creators and topics consistently produce high-value content.
+
+
+Important Limitations
+Transcript-based filtering is not enough for all videos.
+
+Automatic transcription can also contain errors, especially in names, book titles, English terms, and specialized vocabulary. Treat uncertain wording as uncertain and verify important references separately.
+
+Temporary media policy:
+
+- Prefer downloading audio only; do not download full video unless its visual content is necessary for the requested analysis.
+- Keep temporary media only for the duration of the active analysis or an explicitly requested follow-up.
+- Remove temporary files individually by exact path after delivery and disclose the cleanup status to the user.
+
+Videos that may require watching the original:
+
+- Visual tutorials
+- Design critique
+- Film analysis
+- Game analysis
+- Music or performance
+- Editing, cinematography, photography, architecture, or interface demos
+- Any video whose value depends on tone, pacing, visual examples, or embodied demonstration
+
+For these videos, the assistant should mark:
+"Needs original viewing because visual or audio presentation may be central to the value."
+
+
+Project Success Criteria
+This project is successful if it helps:
+
+- Watch fewer low-value videos.
+- Make faster viewing decisions.
+- Preserve attention for high-quality content.
+- Build a reusable personal content filter.
+- Convert useful content into personal notes or actions.
