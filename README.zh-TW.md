@@ -160,7 +160,7 @@ python3 -m unittest discover -s tests -v
 
 ### 5. 交付後追蹤與發佈
 
-影片或 Podcast 報告交付後，建立一次性的 30 分鐘後提醒，請使用者寫下一段簡短的個人總結，其中包含最重要的觀點、自己的判斷，以及一個後續行動。這能將 Assistant 的篩選結果與使用者自己的學習反思清楚分開。
+只有在使用者明確要求總結某支影片或 Podcast，且該次報告已成功交付後，才建立與該支內容綁定的一次性 30 分鐘後提醒。提醒會請使用者寫下一段簡短的個人總結，包含最重要的觀點、自己的判斷，以及一個後續行動。閱讀 README、開啟專案或執行其他任務時不會建立提醒，也不得將此追蹤設為每日、每週或其他週期性排程。這能將 Assistant 的篩選結果與使用者自己的學習反思清楚分開。
 
 完成的報告統一保存於 `summaries/`。在這台工作站上，GitHub 發佈 clone 為 `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`。發佈前必須重建 `INDEX.md`、執行兩項驗證、檢查 Git diff，確認無誤後才 commit 與 push。若發佈 clone 已有無關或未合併的變更，應停止發佈，不可直接覆寫。
 
@@ -197,7 +197,7 @@ Assistant 應針對佇列中的每個項目執行以下步驟：
 11. 每支成功分析的影片建立一份 `summaries/YYYY-MM-DD-video-ID-short-title.md`。
 12. 完成時將佇列更新為 `completed`；缺少必要素材時改為 `needs-input`。
 13. 重建索引並執行驗證。
-14. 建立一次性的 30 分鐘後提醒，請使用者寫下自己的總結、判斷與一個後續行動。
+14. 若本次是使用者明確要求總結影片或 Podcast，且報告已成功交付，建立一個與該報告綁定的 30 分鐘後提醒。此追蹤不得使用週期性排程。
 15. 將已驗證的專案與 `summaries/` 同步到設定的 GitHub 發佈 clone，檢查 diff 後，在 clone 乾淨時 commit 並 push。
 16. 逐一清理暫存媒體。
 

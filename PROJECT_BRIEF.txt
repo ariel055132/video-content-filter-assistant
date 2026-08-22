@@ -45,7 +45,7 @@ Minimum Viable Workflow
 9. Read only the AI output first.
 10. Decide whether to watch the original video.
 11. If the video is watched, write one personal sentence afterward.
-12. After delivering a video or podcast report, create a one-time reminder for 30 minutes later when reminder tooling is available. The reminder should ask the user to write their own summary, judgment, and one next action.
+12. Only when the user explicitly asks for a specific video or podcast to be summarized and that report is successfully delivered, create a report-specific, one-time reminder for 30 minutes later when reminder tooling is available. The reminder should ask the user to write their own summary, judgment, and one next action. Never create this reminder merely because the README or project was opened, and never turn it into a daily, weekly, or other recurring schedule.
 13. Keep every completed report under `summaries/`. On this workstation, publish the validated project and reports through `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`, after reviewing the Git diff and only when that clone is clean.
 14. After the result has been delivered and no further transcript work is pending, delete each downloaded temporary audio/video file and temporary API/config file by its exact path. Never use recursive or bulk deletion. Report what was removed.
 
