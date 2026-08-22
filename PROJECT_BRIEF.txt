@@ -44,9 +44,9 @@ Minimum Viable Workflow
 8. Save each completed summary and analysis as a Markdown file under `summaries/`, using `YYYY-MM-DD-video-ID-short-title.md` when a stable video ID is available.
 9. Read only the AI output first.
 10. Decide whether to watch the original video.
-11. If the video is watched, write one personal sentence afterward.
-12. Only when the user explicitly asks for a specific video or podcast to be summarized and that report is successfully delivered, create a report-specific, one-time reminder for 30 minutes later when reminder tooling is available. The reminder should ask the user to write their own summary, judgment, and one next action. Never create this reminder merely because the README or project was opened, and never turn it into a daily, weekly, or other recurring schedule.
-13. Keep every completed report under `summaries/`. On this workstation, publish the validated project and reports through `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`, after reviewing the Git diff and only when that clone is clean.
+11. Deliver the completed report locally and leave its after-watching sentence blank until the user supplies their own summary, judgment, and one next action. Do not write a personal sentence on the user's behalf.
+12. Only when the user explicitly asks for a specific video or podcast to be summarized, that report is successfully delivered, and the user has not yet supplied their personal sentence, create a report-specific, one-time reminder for 30 minutes later when reminder tooling is available. Never create this reminder merely because the README or project was opened, and never turn it into a daily, weekly, or other recurring schedule.
+13. Keep the report only in the Codex project's `summaries/` until the user replies with their personal sentence. Then write it into the corresponding report, validate the project, and publish through `/Users/adrianli/Documents/GitHub/video-content-filter-assistant` after reviewing the Git diff and only when that clone is clean. If the user declines to add a sentence, do not publish unless they explicitly request publication anyway.
 14. After the result has been delivered and no further transcript work is pending, delete each downloaded temporary audio/video file and temporary API/config file by its exact path. Never use recursive or bulk deletion. Report what was removed.
 
 

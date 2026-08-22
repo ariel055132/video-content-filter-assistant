@@ -159,9 +159,9 @@ The project currently uses only the Python standard library for indexing and tes
 
 ### 5. Follow up and publish
 
-Only when the user explicitly asks for a specific video or podcast to be summarized and that report is successfully delivered, create a report-specific, one-time reminder for 30 minutes later. The reminder asks the user to write a short personal summary containing the most important idea, their own judgment, and one next action. Do not create a reminder merely because the README or project was opened, and never turn this follow-up into a daily, weekly, or other recurring schedule. This keeps the assistant's filtering result separate from the user's learning and reflection.
+After delivering a requested video or podcast report, keep it only in the Codex project's `summaries/` and leave the after-watching sentence blank. Do not publish it to GitHub or write a personal sentence on the user's behalf. If the user has not supplied their sentence yet, create one report-specific, one-time reminder for 30 minutes later. The reminder asks for the most important idea, the user's own judgment, and one next action. Do not create a reminder merely because the README or project was opened, and never turn this follow-up into a daily, weekly, or other recurring schedule.
 
-Completed reports remain under `summaries/`. On this workstation, the GitHub publishing clone is `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`. Rebuild `INDEX.md`, run both validation commands, review the Git diff, and only then commit and push the project and reports. If the publishing clone contains unrelated or unmerged changes, stop instead of overwriting them.
+When the user replies, write their sentence into the corresponding report. Then rebuild `INDEX.md`, run both validation commands, and sync the project and `summaries/` to `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`; review the Git diff before committing and pushing. If the user declines to add a sentence, keep the report local unless they explicitly request publication anyway. If the publishing clone contains unrelated or unmerged changes, stop instead of overwriting them.
 
 ## How to implement the assistant
 
@@ -196,9 +196,10 @@ For each queue item, the assistant should:
 11. Create exactly one `summaries/YYYY-MM-DD-video-ID-short-title.md` report for each successfully analyzed video.
 12. Update the queue to `completed`, or to `needs-input` when essential evidence is unavailable.
 13. Rebuild the index and run validation.
-14. If this run was explicitly requested to summarize a video or podcast and its report was successfully delivered, create one report-specific reminder for 30 minutes later. Never use a recurring schedule for this follow-up.
-15. Sync the validated project and `summaries/` to the configured GitHub publishing clone, review the diff, then commit and push when the clone is clean.
-16. Clean up temporary media one file at a time.
+14. Deliver the report locally with the after-watching sentence blank. If the user has not supplied their sentence, create one report-specific reminder for 30 minutes later; never use a recurring schedule.
+15. Wait for the user's personal summary, judgment, and next action, then write it into the corresponding report. Do not infer or invent this sentence.
+16. Rebuild the index and rerun validation, sync the project and `summaries/` to the configured GitHub publishing clone, review the diff, then commit and push when the clone is clean. If the user declines to add a sentence, publish only when they explicitly request it.
+17. Clean up temporary media one file at a time.
 
 ### Output contract
 

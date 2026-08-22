@@ -56,7 +56,9 @@
 
 ## 交付後追蹤與 GitHub 發佈
 
-1. 只有在使用者明確要求總結某支影片或 Podcast，且該次報告已成功交付後，若當前工具支援提醒，才建立與該支內容綁定的一次性 30 分鐘後提醒，請使用者寫下自己的總結、判斷與一個後續行動。閱讀 README、開啟專案或進行其他任務時不建立提醒；禁止將此設為每日、每週或其他週期性排程。
-2. 正式報告一律保存於 `summaries/`；不得將完整逐字稿或媒體檔案放入此目錄。
-3. 這台工作站的 GitHub 發佈 clone 為 `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`。發佈前先重建索引並通過兩項驗證，再將專案檔案與 `summaries/` 同步到該 clone，檢查 diff 後 commit 並 push。
-4. 不得覆寫來源不明或未合併的 GitHub clone 變更；工作樹不乾淨時先停止發佈並回報。
+1. 新報告完成並交付後，先只保存在 Codex project 的 `summaries/`；在使用者補上自己的總結、判斷與一個後續行動以前，不得同步或 push 到 GitHub。報告的「看完後的一句話」必須先保留空白，不得由助理代寫成使用者觀點。
+2. 只有在使用者明確要求總結某支影片或 Podcast，且該次報告已成功交付後，若使用者尚未提供個人一句話且當前工具支援提醒，才建立與該支內容綁定的一次性 30 分鐘後提醒。閱讀 README、開啟專案或進行其他任務時不建立提醒；禁止將此設為每日、每週或其他週期性排程。
+3. 使用者回覆後，將其個人總結、判斷與後續行動寫入對應報告的「看完後的一句話」。若使用者明確表示不補，除非使用者另外明確要求發佈，否則報告繼續只保留在 Codex project。
+4. 正式報告一律保存於 Codex project 的 `summaries/`；不得將完整逐字稿或媒體檔案放入此目錄。
+5. 這台工作站的 GitHub 發佈 clone 為 `/Users/adrianli/Documents/GitHub/video-content-filter-assistant`。收到個人一句話後，先重建索引並通過兩項驗證，再將專案檔案與 `summaries/` 同步到該 clone，檢查 diff 後 commit 並 push。
+6. 不得覆寫來源不明或未合併的 GitHub clone 變更；工作樹不乾淨時先停止發佈並回報。
