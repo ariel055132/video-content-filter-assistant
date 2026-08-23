@@ -2,15 +2,16 @@
 
 > 本檔由 `python3 tools/rebuild_index.py` 自動產生；請勿手動編輯。
 
-- 最新分析日：2026-08-21
-- 獨立影片報告：122
+- 最新分析日：2026-08-23
+- 獨立影片報告：123
 - 集合／播放清單索引：5
-- 分析層級：quick-screen 36、full-transcript 86、舊格式／未標示 0
+- 分析層級：quick-screen 36、full-transcript 87、舊格式／未標示 0
 
 ## 獨立影片報告
 
 | 分析日 | 報告 | 層級 | 建議 | 推薦分 | 品質分 | 作者／頻道 | 來源 |
 |---|---|---|---|---:|---:|---|---|
+| 2026-08-23 | [【効率厨】元Amazonエンジニアの開発環境 / ウィンドウマネジメント術がやばい。](summaries/2026-08-23-qfnYmXcFu5o-AI時代的視窗與Agent工作流.md) | full-transcript | Selected sections | 7/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=qfnYmXcFu5o) |
 | 2026-08-21 | [芒格家族资产管理人 李录：投资的意义究竟是什么？](summaries/2026-08-21-qMkLFdHbzSA-李錄談投資的意義.md) | full-transcript | Full watch | 8/10 | 20/25 | 学用复利投资Value Insights | [原片](https://www.youtube.com/watch?v=qMkLFdHbzSA) |
 | 2026-08-21 | [股神巴菲特 含金量最高的演講：論投資與人生之道 \| 段永平看了十次](summaries/2026-08-21-SedPLXT6__w-巴菲特1998佛羅里達大學演講.md) | full-transcript | Deep study | 10/10 | 24/25 | 名言語錄QUOTES | [原片](https://www.youtube.com/watch?v=SedPLXT6__w) |
 | 2026-08-21 | [巴菲特 最新 CNBC訪談：當每個人都更喜歡賭博時，很難找到有價值的東西⋯⋯｜投資Google的原因，對AI的看法，為何停止捐款蓋茨基金會？⋯⋯ ｜2026年7月15日 CNBC專訪巴菲特](summaries/2026-08-21-Igft9InNXrc-巴菲特2026-CNBC訪談.md) | full-transcript | Full watch | 9/10 | 22/25 | 名言語錄QUOTES | [原片](https://www.youtube.com/watch?v=Igft9InNXrc) |
