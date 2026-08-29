@@ -2,7 +2,7 @@
 
 > 本檔由 `python3 tools/rebuild_index.py` 自動產生；請勿手動編輯。
 
-- 最新分析日：2026-08-23
+- 最新分析日：2026-08-27
 - 獨立影片報告：123
 - 集合／播放清單索引：5
 - 分析層級：quick-screen 36、full-transcript 87、舊格式／未標示 0
@@ -11,6 +11,7 @@
 
 | 分析日 | 報告 | 層級 | 建議 | 推薦分 | 品質分 | 作者／頻道 | 來源 |
 |---|---|---|---|---:|---:|---|---|
+| 2026-08-27 | [單螢幕、AeroSpace 與 3D 列印：26 歲 IT 工程師桌面工作流](summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md) | full-transcript | Selected sections | 8/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=JfanuHDM400) |
 | 2026-08-23 | [【効率厨】元Amazonエンジニアの開発環境 / ウィンドウマネジメント術がやばい。](summaries/2026-08-23-qfnYmXcFu5o-AI時代的視窗與Agent工作流.md) | full-transcript | Selected sections | 7/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=qfnYmXcFu5o) |
 | 2026-08-21 | [芒格家族资产管理人 李录：投资的意义究竟是什么？](summaries/2026-08-21-qMkLFdHbzSA-李錄談投資的意義.md) | full-transcript | Full watch | 8/10 | 20/25 | 学用复利投资Value Insights | [原片](https://www.youtube.com/watch?v=qMkLFdHbzSA) |
 | 2026-08-21 | [股神巴菲特 含金量最高的演講：論投資與人生之道 \| 段永平看了十次](summaries/2026-08-21-SedPLXT6__w-巴菲特1998佛羅里達大學演講.md) | full-transcript | Deep study | 10/10 | 24/25 | 名言語錄QUOTES | [原片](https://www.youtube.com/watch?v=SedPLXT6__w) |
@@ -41,7 +42,6 @@
 | 2026-08-15 | [NOT A HOTEL 智慧家庭工程師桌面——影片摘要與分析](summaries/2026-08-15-hqzdZrJjE-I-NOT-A-HOTEL智慧家庭工程師桌面.md) | full-transcript | Selected sections | — | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=hqzdZrJjE-I) |
 | 2026-08-15 | [以音響建立專注環境——影片摘要與分析](summaries/2026-08-15-eH8KVInw0kg-以音響建立專注環境.md) | full-transcript | Read summary | — | 15/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=eH8KVInw0kg) |
 | 2026-08-15 | [外商工程師的極簡桌面——影片摘要與分析](summaries/2026-08-15-O94F1j_-TQQ-外商工程師的極簡桌面.md) | full-transcript | Selected sections | — | 19/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=O94F1j_-TQQ) |
-| 2026-08-15 | [單螢幕、AeroSpace 與 3D 列印——影片摘要與分析](summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md) | full-transcript | Selected sections | — | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=JfanuHDM400) |
 | 2026-08-15 | [本地 AI、DIY 與高階顯示器桌面——影片摘要與分析](summaries/2026-08-15-J5R00Xz0YN0-本地AI與DIY高階桌面.md) | full-transcript | Read summary | — | 15/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=J5R00Xz0YN0) |
 | 2026-08-15 | [Findy SRE 工程師的一天——影片摘要與分析](summaries/2026-08-15-2aopnPQJLVA-Findy-SRE工程師的一天.md) | full-transcript | Selected sections | — | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=2aopnPQJLVA) |
 | 2026-08-14 | [應屆生求職技巧：履歷、面試、人脈，學生如何準備進入職場——影片摘要與分析](summaries/2026-08-14-BV1w7jwzqE2B-應屆生求職技巧履歷面試人脈學生如何準備進入職場.md) | full-transcript | — | — | — | 代碼之外 Beyond Code | [原片](https://www.bilibili.com/video/BV1w7jwzqE2B/) |

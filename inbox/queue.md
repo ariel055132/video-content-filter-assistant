@@ -11,6 +11,7 @@
 | https://www.youtube.com/watch?v=Igft9InNXrc | full-transcript | chat | 投資、巴菲特、Alphabet、AI、慈善 | normal | completed | summaries/2026-08-21-Igft9InNXrc-巴菲特2026-CNBC訪談.md |
 | https://www.youtube.com/watch?v=SedPLXT6__w | full-transcript | chat | 投資、巴菲特、價值投資、人生哲學 | normal | completed | summaries/2026-08-21-SedPLXT6__w-巴菲特1998佛羅里達大學演講.md |
 | https://www.youtube.com/watch?v=qfnYmXcFu5o | full-transcript | chat | AI、開發工作流、Codex、AeroSpace | normal | completed | summaries/2026-08-23-qfnYmXcFu5o-AI時代的視窗與Agent工作流.md |
+| https://www.youtube.com/watch?v=JfanuHDM400&t=728s | full-transcript | chat | 工程師工作流、AeroSpace、3D 列印、技術閱讀 | normal | completed | summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md |
 
 ## 處理約定
 
