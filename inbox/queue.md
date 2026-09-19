@@ -13,6 +13,8 @@
 | https://www.youtube.com/watch?v=qfnYmXcFu5o | full-transcript | chat | AI、開發工作流、Codex、AeroSpace | normal | completed | summaries/2026-08-23-qfnYmXcFu5o-AI時代的視窗與Agent工作流.md |
 | https://www.youtube.com/watch?v=JfanuHDM400&t=728s | full-transcript | chat | 工程師工作流、AeroSpace、3D 列印、技術閱讀 | normal | completed | summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md |
 
+| https://www.youtube.com/watch?v=Tntj4FUU4So | quick-screen | chat | 科技、遊戲手機、Redmagic | normal | completed | [快速初篩](../summaries/2026-09-19-Tntj4FUU4So-Redmagic11SPro快速初篩.md)；選段觀看，6/10、17/25（暫定）；字幕時間軸異常，低信心。 |
+
 ## 處理約定
 
 - 一列只放一支影片；播放清單可放一列，但處理後仍要為每支成功分析的影片建立獨立摘要。
