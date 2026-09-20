@@ -15,6 +15,8 @@
 
 | https://www.youtube.com/watch?v=Tntj4FUU4So | quick-screen | chat | 科技、遊戲手機、Redmagic | normal | completed | [快速初篩](../summaries/2026-09-19-Tntj4FUU4So-Redmagic11SPro快速初篩.md)；選段觀看，6/10、17/25（暫定）；字幕時間軸異常，低信心。 |
 
+| https://www.youtube.com/watch?v=HL8q7k6MwGY | full-transcript | chat | AI、iOS27、Siri、工作流 | normal | completed | summaries/2026-09-17-HL8q7k6MwGY-iOS27功能與SiriAI.md |
+
 ## 處理約定
 
 - 一列只放一支影片；播放清單可放一列，但處理後仍要為每支成功分析的影片建立獨立摘要。

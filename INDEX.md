@@ -3,15 +3,16 @@
 > 本檔由 `python3 tools/rebuild_index.py` 自動產生；請勿手動編輯。
 
 - 最新分析日：2026-09-19
-- 獨立影片報告：124
+- 獨立影片報告：125
 - 集合／播放清單索引：5
-- 分析層級：quick-screen 37、full-transcript 87、舊格式／未標示 0
+- 分析層級：quick-screen 37、full-transcript 88、舊格式／未標示 0
 
 ## 獨立影片報告
 
 | 分析日 | 報告 | 層級 | 建議 | 推薦分 | 品質分 | 作者／頻道 | 來源 |
 |---|---|---|---|---:|---:|---|---|
 | 2026-09-19 | [我買了市面上最後一部遊戲手機 - Redmagic 11S PRO【VG開箱】(CC中字)](summaries/2026-09-19-Tntj4FUU4So-Redmagic11SPro快速初篩.md) | quick-screen | Selected sections | 6/10 | 17/25 | ValorGears | [原片](https://www.youtube.com/watch?v=Tntj4FUU4So) |
+| 2026-09-17 | [10個升級iOS 27你必須知道的事  Siri AI 全新功能 🍎 iPhone 隱藏功能](summaries/2026-09-17-HL8q7k6MwGY-iOS27功能與SiriAI.md) | full-transcript | Selected sections | 8/10 | 20/25 | Edwin H. | [原片](https://www.youtube.com/watch?v=HL8q7k6MwGY) |
 | 2026-08-27 | [單螢幕、AeroSpace 與 3D 列印：26 歲 IT 工程師桌面工作流](summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md) | full-transcript | Selected sections | 8/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=JfanuHDM400) |
 | 2026-08-23 | [【効率厨】元Amazonエンジニアの開発環境 / ウィンドウマネジメント術がやばい。](summaries/2026-08-23-qfnYmXcFu5o-AI時代的視窗與Agent工作流.md) | full-transcript | Selected sections | 7/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=qfnYmXcFu5o) |
 | 2026-08-21 | [芒格家族资产管理人 李录：投资的意义究竟是什么？](summaries/2026-08-21-qMkLFdHbzSA-李錄談投資的意義.md) | full-transcript | Full watch | 8/10 | 20/25 | 学用复利投资Value Insights | [原片](https://www.youtube.com/watch?v=qMkLFdHbzSA) |
