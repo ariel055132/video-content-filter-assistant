@@ -17,6 +17,8 @@
 
 | https://www.youtube.com/watch?v=HL8q7k6MwGY | full-transcript | chat | AI、iOS27、Siri、工作流 | normal | completed | summaries/2026-09-17-HL8q7k6MwGY-iOS27功能與SiriAI.md |
 
+| https://techporn.io/podcast/dada4ae4-d615-4b3c-a741-dacaa37cf8bb | full-transcript | chat | AI、第二大腦、知識管理 | normal | completed | [完整分析](../summaries/2026-09-21-dada4ae4-d615-4b3c-a741-dacaa37cf8bb-AI第二大腦與知識編譯.md)；21:03 全集本機轉錄，604 行全文；無可靠逐句時間碼。選段收聽，7/10、18/25。 個人心得已於 2026-09-23 補齊。 |
+
 ## 處理約定
 
 - 一列只放一支影片；播放清單可放一列，但處理後仍要為每支成功分析的影片建立獨立摘要。
