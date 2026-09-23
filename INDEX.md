@@ -12,6 +12,7 @@
 | 分析日 | 報告 | 層級 | 建議 | 推薦分 | 品質分 | 作者／頻道 | 來源 |
 |---|---|---|---|---:|---:|---|---|
 | 2026-09-21 | [EP286 \| 讓 AI 成為第二大腦](summaries/2026-09-21-dada4ae4-d615-4b3c-a741-dacaa37cf8bb-AI第二大腦與知識編譯.md) | full-transcript | Selected sections | 7/10 | 18/25 | 程人頻道（TED） | [原片](https://techporn.io/podcast/dada4ae4-d615-4b3c-a741-dacaa37cf8bb) |
+| 2026-09-21 | [EP292 \| AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！](summaries/2026-09-21-7ee81785-ef27-4780-90e9-f6c762a93368-AI長任務與理解債.md) | full-transcript | Selected sections | 8/10 | 20/25 | 程人頻道／TED | [原片](https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368) |
 | 2026-09-19 | [我買了市面上最後一部遊戲手機 - Redmagic 11S PRO【VG開箱】(CC中字)](summaries/2026-09-19-Tntj4FUU4So-Redmagic11SPro快速初篩.md) | quick-screen | Selected sections | 6/10 | 17/25 | ValorGears | [原片](https://www.youtube.com/watch?v=Tntj4FUU4So) |
 | 2026-09-17 | [10個升級iOS 27你必須知道的事  Siri AI 全新功能 🍎 iPhone 隱藏功能](summaries/2026-09-17-HL8q7k6MwGY-iOS27功能與SiriAI.md) | full-transcript | Selected sections | 8/10 | 20/25 | Edwin H. | [原片](https://www.youtube.com/watch?v=HL8q7k6MwGY) |
 | 2026-08-27 | [單螢幕、AeroSpace 與 3D 列印：26 歲 IT 工程師桌面工作流](summaries/2026-08-15-JfanuHDM400-單螢幕與AeroSpace工作流.md) | full-transcript | Selected sections | 8/10 | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=JfanuHDM400) |
@@ -23,7 +24,6 @@
 | 2026-08-15 | [AI 工程師的 3D 列印工作房——影片摘要與分析](summaries/2026-08-15-xOlIPBz1y68-AI工程師的3D列印工作房.md) | full-transcript | Full watch | — | 20/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=xOlIPBz1y68) |
 | 2026-08-15 | [EP294：軟體創業已死？AI 時代回歸剛性需求！玄學、認知與命運。ft. 簡少年](summaries/2026-08-15-techporn-EP294-AI創業與命理.md) | full-transcript | Read summary | — | 15/25 | 程人頻道 | [原片](https://techporn.io/podcast/b3750038-0363-4ab6-ba4e-0af5daf1fb20) |
 | 2026-08-15 | [EP293：工程師的巔峰期像 NBA？AI 時代生存法則與 Graph Engineering！](summaries/2026-08-15-techporn-EP293-Graph-Engineering.md) | full-transcript | Full watch | — | 21/25 | 程人頻道 | [原片](https://techporn.io/podcast/e55e34c7-fc3a-40a9-8c2d-0fec80cc34fb) |
-| 2026-08-15 | [EP292：AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！](summaries/2026-08-15-techporn-EP292-下一代AI開發.md) | full-transcript | Full watch | — | 22/25 | 程人頻道 | [原片](https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368) |
 | 2026-08-15 | [EP291：AI 爆發！還需要更多工程師？](summaries/2026-08-15-techporn-EP291-AI爆發與工程師.md) | full-transcript | Selected sections | — | 18/25 | 程人頻道 | [原片](https://techporn.io/podcast/9672df5d-e24f-44dd-bd68-b42ac3b44c62) |
 | 2026-08-15 | [EP290：32 歲不當工程師？AI 時代的第二曲線！深度生活的自我重構。ft. 老莫 Kyle Mo](summaries/2026-08-15-techporn-EP290-工程師第二曲線.md) | full-transcript | Selected sections | — | 20/25 | 程人頻道 | [原片](https://techporn.io/podcast/47fcda70-7f2b-46e4-930c-9b943436fa0a) |
 | 2026-08-15 | [EP289：紐約生存實錄！AI 時代的求職煉獄？跨國創業的體感轉化。ft. Hogan](summaries/2026-08-15-techporn-EP289-紐約生存與跨國創業.md) | full-transcript | Selected sections | — | 17/25 | 程人頻道 | [原片](https://techporn.io/podcast/073b8971-de7d-42e9-b2ab-9ab3e8bb838e) |
