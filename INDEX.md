@@ -2,15 +2,16 @@
 
 > 本檔由 `python3 tools/rebuild_index.py` 自動產生；請勿手動編輯。
 
-- 最新分析日：2026-09-21
-- 獨立影片報告：126
+- 最新分析日：2026-10-02
+- 獨立影片報告：127
 - 集合／播放清單索引：5
-- 分析層級：quick-screen 37、full-transcript 89、舊格式／未標示 0
+- 分析層級：quick-screen 37、full-transcript 90、舊格式／未標示 0
 
 ## 獨立影片報告
 
 | 分析日 | 報告 | 層級 | 建議 | 推薦分 | 品質分 | 作者／頻道 | 來源 |
 |---|---|---|---|---:|---:|---|---|
+| 2026-10-02 | [【思考の速度で編集したい(願望)】初心者のためのVim完全入門「Neovimの使い方を知ろう」](summaries/2026-10-02-video-80zZQLe0NNg-neovim-beginner-introduction.md) | full-transcript | Selected sections | 7/10 | 17/25 | TECH WORLD | [原片](https://www.youtube.com/watch?v=80zZQLe0NNg) |
 | 2026-09-21 | [EP286 \| 讓 AI 成為第二大腦](summaries/2026-09-21-dada4ae4-d615-4b3c-a741-dacaa37cf8bb-AI第二大腦與知識編譯.md) | full-transcript | Selected sections | 7/10 | 18/25 | 程人頻道（TED） | [原片](https://techporn.io/podcast/dada4ae4-d615-4b3c-a741-dacaa37cf8bb) |
 | 2026-09-21 | [EP292 \| AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！](summaries/2026-09-21-7ee81785-ef27-4780-90e9-f6c762a93368-AI長任務與理解債.md) | full-transcript | Selected sections | 8/10 | 20/25 | 程人頻道／TED | [原片](https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368) |
 | 2026-09-19 | [我買了市面上最後一部遊戲手機 - Redmagic 11S PRO【VG開箱】(CC中字)](summaries/2026-09-19-Tntj4FUU4So-Redmagic11SPro快速初篩.md) | quick-screen | Selected sections | 6/10 | 17/25 | ValorGears | [原片](https://www.youtube.com/watch?v=Tntj4FUU4So) |

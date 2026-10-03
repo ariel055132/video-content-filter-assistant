@@ -21,6 +21,8 @@
 
 | https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368 | full-transcript | chat | AI、工程師、Agent、理解債務 | normal | completed | [完整分析](../summaries/2026-09-21-7ee81785-ef27-4780-90e9-f6c762a93368-AI長任務與理解債.md)；35:29 完整音訊本機轉錄，另補核片尾；更新原有同集報告。選段收聽，8/10、20/25；章節時間為第三方約略導航。2026-09-24 已補個人心得與協作流程。 |
 
+| https://www.youtube.com/watch?v=80zZQLe0NNg | full-transcript | chat | Vim、Neovim、工程師工作流 | normal | completed | 2026-10-02：已從 Chrome 播放器取得完整日文自動 CC，核對 00:00.04–49:22.92 與片長 49:24；完成 [獨立報告](../summaries/2026-10-02-video-80zZQLe0NNg-neovim-beginner-introduction.md)，推薦 7/10、品質 17/25、選段觀看。2026-10-03：已記錄使用者心得與多練習 Neovim 的後續行動；使用者已明確要求將報告、佇列與索引一併發佈至 GitHub。 |
+
 ## 處理約定
 
 - 一列只放一支影片；播放清單可放一列，但處理後仍要為每支成功分析的影片建立獨立摘要。
